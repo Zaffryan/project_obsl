@@ -116,12 +116,12 @@ html, body {
 .slot {
   position: absolute;
   bottom: 0;
-  height: 820px;
+  height: 744px;
   pointer-events: none;
 }
 .slot-left { left: 30px; }
 .slot-right { right: 30px; }
-.slot-center { left: 0; right: 0; display: flex; justify-content: center; }
+.slot-center { left: 330px;}
 
 .char {
   display: block;

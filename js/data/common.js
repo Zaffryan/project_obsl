@@ -13,7 +13,7 @@ window.BACKGROUNDS = {
 /* slot: где стоит герой — 'left' (слева), 'center' (по центру), 'right' (справа)
    tagBg / tagFg: цвет таблички с именем и цвет текста на ней */
 window.CHARACTERS = {
-  dima:   { name: 'Дима',   image: 'assets/chars/dima.png',   slot: 'right',  tagBg: '#ffd600', tagFg: '#111111' },
-  sergey: { name: 'Сергей', image: 'assets/chars/sergey.png', slot: 'left',   tagBg: '#6bd35a', tagFg: '#0b2a07' },
-  liza:   { name: 'Лиза',   image: 'assets/chars/liza.png',   slot: 'center', tagBg: '#e5484d', tagFg: '#ffffff' }
+  dima:   { name: 'Дима',   image: 'assets/chars/dima.png',   slot: 'right',  tagBg: '#ffd600', tagFg: '#111111' }, 
+  liza:   { name: 'Лиза',   image: 'assets/chars/liza.png',   slot: 'center', tagBg: '#e5484d', tagFg: '#ffffff' },
+  sergey: { name: 'Сергей', image: 'assets/chars/sergey.png', slot: 'left',   tagBg: '#6bd35a', tagFg: '#0b2a07' }
 };
