@@ -58,7 +58,10 @@
   (function preload() {
     var list = [];
     Object.keys(window.BACKGROUNDS).forEach(function (k) { list.push(window.BACKGROUNDS[k]); });
-    Object.keys(window.CHARACTERS).forEach(function (k) { list.push(window.CHARACTERS[k].image); });
+    Object.keys(window.CHARACTERS).forEach(function (k) {
+      var imgs = window.CHARACTERS[k].images;
+      Object.keys(imgs).forEach(function (e) { list.push(imgs[e]); });
+    });
     window.LESSONS.forEach(function (l) { list.push(l.card); });
     list.forEach(function (src) { var i = new Image(); i.src = src; });
   })();
@@ -108,7 +111,7 @@
     slot.className = 'slot slot-' + c.slot;
     var img = document.createElement('img');
     img.className = 'char';
-    img.src = c.image;
+    img.src = c.images.neutral;
     img.alt = c.name;
     slot.appendChild(img);
     charsEl.appendChild(slot);
@@ -145,6 +148,10 @@
 
   function setVisible(id, on) {
     if (charEls[id]) charEls[id].classList.toggle('visible', on);
+  }
+  function setEmotion(id, emotion) {
+    var images = window.CHARACTERS[id].images;
+    charEls[id].src = images[emotion] || images.neutral;
   }
 
   /* ---------- Озвучка (если у шага есть audio) ---------- */
@@ -218,6 +225,10 @@
   function showLine(step) {
     Object.keys(charEls).forEach(function (id) {
       charEls[id].classList.toggle('speaking', !step.who || id === step.who);
+    });
+    Object.keys(charEls).forEach(function (id) {
+      var emotion = (id === step.who) ? step.emotion : 'neutral';
+      setEmotion(id, emotion || 'neutral');
     });
     var c = step.who ? window.CHARACTERS[step.who] : null;
     if (c) {

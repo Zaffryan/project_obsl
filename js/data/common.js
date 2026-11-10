@@ -13,7 +13,36 @@ window.BACKGROUNDS = {
 /* slot: где стоит герой — 'left' (слева), 'center' (по центру), 'right' (справа)
    tagBg / tagFg: цвет таблички с именем и цвет текста на ней */
 window.CHARACTERS = {
-  dima:   { name: 'Дима',   image: 'assets/chars/dima.png',   slot: 'right',  tagBg: '#ffd600', tagFg: '#111111' }, 
-  liza:   { name: 'Лиза',   image: 'assets/chars/liza.png',   slot: 'center', tagBg: '#e5484d', tagFg: '#ffffff' },
-  sergey: { name: 'Сергей', image: 'assets/chars/sergey.png', slot: 'left',   tagBg: '#6bd35a', tagFg: '#0b2a07' }
+  dima:   { 
+    name: 'Дима',
+    slot: 'right',
+    tagBg: '#ffd600', 
+    tagFg: '#111111',
+    images: {
+      neutral: 'assets/chars/dima.png',
+      scared: 'assets/chars/dima_scared.png',
+      upset: 'assets/chars/dima_upset.png',
+      dreamy: 'assets/chars/dima_dreamy.png' } 
+  }, 
+  liza:   {
+    name: 'Лиза',
+    slot: 'center',
+    tagBg: '#e5484d',
+    tagFg: '#ffffff',
+    images: {
+      neutral: 'assets/chars/liza.png',
+      smile: 'assets/chars/liza_smile.png',
+      strict: 'assets/chars/liza_strict.png' }  
+  },
+  sergey: {
+    name: 'Сергей',
+    slot: 'left',
+    tagBg: '#6bd35a',
+    tagFg: '#0b2a07',
+    images: {
+      neutral: 'assets/chars/sergey.png',
+      smile: 'assets/chars/sergey_smile.png',
+      eyeroll: 'assets/chars/sergey_eyeroll.png',
+      scaring: 'assets/chars/sergey_scaring.png'
+    } }
 };
